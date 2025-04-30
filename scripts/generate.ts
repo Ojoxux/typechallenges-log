@@ -1,15 +1,27 @@
 import { writeFileSync, mkdirSync, existsSync } from "fs";
 import { join } from "path";
 
-const [id, slug] = process.argv.slice(2);
+const [difficulty, id, slug] = process.argv.slice(2);
 
-if (!id || !slug) {
-  console.error("❌ Usage: npm run gen <id> <slug>");
+if (!difficulty || !id || !slug) {
+  console.error("❌ Usage: npm run gen <difficulty> <id> <slug>");
+  console.error("example: npm run gen easy 00004 pick");
+  process.exit(1);
+}
+
+// validate of difficulty
+const validDifficulties = ["warm", "easy", "medium", "hard", "extreme"];
+if (!validDifficulties.includes(difficulty)) {
+  console.error(
+    `❌ Invalid difficulty: "${difficulty}". Choose from ${validDifficulties.join(
+      ", "
+    )}`
+  );
   process.exit(1);
 }
 
 const dirName = `${id}-${slug}`;
-const dirPath = join("questions", "easy", dirName);
+const dirPath = join("questions", difficulty, dirName);
 
 if (existsSync(dirPath)) {
   console.warn(`⚠️ ${dirPath} already exists. Skipping.`);
