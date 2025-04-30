@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "gen": "tsx scripts/generate.ts"
+    "gen": "tsx scripts/generate.ts",
+    "update:readme": "tsx scripts/update-readme.ts"
   },
   "keywords": [],
   "author": "",
