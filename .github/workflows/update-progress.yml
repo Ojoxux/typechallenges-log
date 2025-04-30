@@ -1,0 +1,37 @@
+name: Update Progress
+
+on:
+  push:
+    paths:
+      - "questions/**"
+      - "scripts/generate-progress.ts"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate progress
+        run: npx tsx scripts/generate-progress.ts
+
+      - name: Update README.md
+        run: npx tsx scripts/update-readme.ts
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "chore: update progress in README"
+          git push
