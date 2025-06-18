@@ -9,7 +9,7 @@ const progress = readFileSync(progressPath, "utf8");
 
 const updated = readme.replace(
   /<!--progress-start-->[\s\S]*?<!--progress-end-->/,
-  `<!--progress-start-->\n\n${progress.trim()}\n\n<!--progress-end-->`
+  `<!--progress-start-->\n\n${progress.trim()}\n\n<!--progress-end-->`,
 );
 
 writeFileSync(readmePath, updated);
