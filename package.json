@@ -5,7 +5,8 @@
   "scripts": {
     "gen": "tsx scripts/generate.ts",
     "update:readme": "tsx scripts/update-readme.ts",
-    "progress": "tsx scripts/generate-progress.ts"
+    "progress": "tsx scripts/generate-progress.ts",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@type-challenges/utils": "^0.1.1",
     "@types/node": "^22.15.3",
     "tsx": "^4.19.4",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "prettier": "^3.0.0"
   }
 }
