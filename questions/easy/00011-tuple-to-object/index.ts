@@ -21,5 +21,5 @@
 /* _____________ ここにコードを記入 _____________ */
 
 export type TupleToObject<T extends readonly PropertyKey[]> = {
-  [K in T[number]]: K
-}
+  [K in T[number]]: K;
+};

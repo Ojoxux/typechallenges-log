@@ -22,5 +22,6 @@
 
 /* _____________ ここにコードを記入 _____________ */
 
-export type First<T extends any[]> = 
-    T extends [infer F, ...infer R] ? F : never
+export type First<T extends any[]> = T extends [infer F, ...infer R]
+  ? F
+  : never;
