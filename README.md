@@ -1,4 +1,4 @@
-# 🧠 おじょうの Type Challenges Log
+# 🧠 Type-Challengesの学習記録リポジトリ
 
 TypeScript の型システムを鍛えるためのチャレンジ記録リポジトリです。  
 実際にコードを書きながらTypeScriptの型仕様をを学習しています。
