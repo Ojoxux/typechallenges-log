@@ -66,10 +66,10 @@ TypeScript の型システムを鍛えるためのチャレンジ記録リポジ
 ```
 .
 ├── questions/
-│ └── easy/<question-number>-<question-name>/
-│ ├── index.ts # 解答
-│ ├── test-cases.ts # 型テスト
-│ └── notes.md # 詰まりポイントと学び
+│ └── <question-difficulty>/<question-number>-<question-name>/
+│     ├── index.ts # 解答
+│     ├── test-cases.ts # 型テスト
+│     └── notes.md # 詰まりポイントと学び
 ├── scripts/
 │ ├── generate.ts # 問題テンプレ生成 CLI
 │ └── generate-progress.ts # README 用進捗表自動生成
