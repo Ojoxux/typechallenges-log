@@ -1,11 +1,12 @@
-import type { Equal, Expect } from "@type-challenges/utils";
-import type { MyPick } from "questions/easy/00004-pick/index";
+import type { Equal, Expect } from '@type-challenges/utils';
+import type { MyPick } from './index';
 
 type cases = [
-  Expect<Equal<Expected1, MyPick<Todo, "title">>>,
-  Expect<Equal<Expected2, MyPick<Todo, "title" | "completed">>>,
+  Expect<Equal<Expected1, MyPick<Todo, 'title'>>>,
+  Expect<Equal<Expected2, MyPick<Todo, 'title' | 'completed'>>>,
 
-  MyPick<Todo, "title" | "completed" | "invalid">,
+  // @ts-expect-error
+  MyPick<Todo, 'title' | 'completed' | 'invalid'>,
 ];
 
 interface Todo {

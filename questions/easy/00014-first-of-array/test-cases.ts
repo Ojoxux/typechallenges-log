@@ -1,5 +1,5 @@
-import { Equal, Expect } from "@type-challenges/utils";
-import type { First } from "./index";
+import type { Equal, Expect } from '@type-challenges/utils';
+import type { First } from './index';
 
 type cases = [
   Expect<Equal<First<[3, 2, 1]>, 3>>,
@@ -8,4 +8,5 @@ type cases = [
   Expect<Equal<First<[undefined]>, undefined>>,
 ];
 
-type errors = [First<"notArray">, First<{ 0: "arrayLike" }>];
+// @ts-expect-error
+type errors = [First<'notArray'>, First<{ 0: 'arrayLike' }>];
