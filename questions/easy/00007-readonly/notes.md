@@ -30,7 +30,7 @@ type Todo = {
   completed: boolean;
 };
 
-type Test = MyReadonly<Todo, "title">;
+type Test = MyReadonly<Todo, 'title'>;
 ```
 
 これは展開するとこうなる：
@@ -41,16 +41,4 @@ type Test = {
 };
 ```
 
-→ descriptionとcompletedはもういない...😢
-
-### 補足知識: Mapped Type は「何を書くか」で決まる
-
-```typescript
-type X<T> = {
-  [K in "a" | "b"]: T[K]; // ここで'a'と'b'しか指定してない
-};
-```
-
-この場合は`a`と`b`しか使われない。それ以外は最初からスルーされる
-
-だから、意識して「残す」か「消す」かをコントロールするのがポイント
+→ descriptionとcompletedは型に登場しない
