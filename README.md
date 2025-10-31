@@ -5,8 +5,6 @@ TypeScript の型システムを鍛えるためのチャレンジ記録リポジ
 
 ---
 
-## ✅ 解答状況（自動生成）
-
 <!--progress-start-->
 
 ## ✅ Type Challenges Progress
