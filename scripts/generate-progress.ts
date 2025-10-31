@@ -10,7 +10,7 @@ import { join } from "path";
 const basePath = "questions";
 const difficulties = ["warm", "easy", "medium", "hard", "extreme"];
 
-let markdown = `## ✅ Type Challenges Progress\n\n| No. | 問題名 | 難易度 | ステータス | ノート |\n|-----|--------|--------|------------|--------|\n`;
+let markdown = `## ✅ type-challenges Progress\n\n| No. | 問題名 | 難易度 | ステータス | ノート |\n|-----|--------|--------|------------|--------|\n`;
 
 for (const difficulty of difficulties) {
   const dir = join(basePath, difficulty);
