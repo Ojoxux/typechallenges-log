@@ -7,7 +7,7 @@ TypeScript の型システムを鍛えるためのチャレンジ記録リポジ
 
 <!--progress-start-->
 
-## ✅ Type Challenges Progress
+## ✅ type-challenges Progress
 
 | No. | 問題名 | 難易度 | ステータス | ノート |
 |-----|--------|--------|------------|--------|
